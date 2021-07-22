@@ -2,13 +2,27 @@
 <html>
 <head>
 	<meta charset="utf-8"/>
-	<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"/> -->
+	
 	<title>
 		Product Catalog
 	</title>
 	<link rel="stylesheet" href="index.css"/>
 	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
-	
+	<script>
+		
+		function Delete(e){
+			let items = [];
+			JSON.parse(localStorage.getItem('items')).map(data=>{
+				if(data.id != e.parentElement.parentElement.children[0].textContent){
+					
+					items.push(data);
+
+				}
+			});
+			localStorage.setItem('items',JSON.stringify(items));
+			window.location.reload();
+		};
+	</script>
 </head>
 <body>
 	<div class="main">
@@ -26,7 +40,8 @@
 					<h1>iPhone 12/ Purple/<br> 64gb</h1>
                     <!-- <h1> Mfd: Jan, 2021. </h1> -->
 					<p>Rs.<span>64999/-</span></p>
-					<a href="#" title="add to cart" class="attToCart">Add to cart</a>
+					<a href="#" title="details" class="">View Details</a>
+                    <a href="#" title="add to cart" class="attToCart">Add to cart</a>
 				</div>
 			</div>
 			<div class="item">
@@ -34,6 +49,7 @@
 				<div class="itemInfo">
 					<h1>iPhone 11/ Green/<br>128GB</h1>
 					<p>Rs.<span>59900/-</span></p>
+					<a href="#" title="details" class="">View Details</a>
 					<a href="#" title="add to cart" class="attToCart">Add to cart</a>
 				</div>
 			</div>
@@ -42,6 +58,7 @@
 				<div class="itemInfo">
 					<h1>Apple Watch SE /44mm/SpaceGrey/GPS+Cellular.</h1>
 					<p>Rs.<span>36900/-</span></p>
+					<a href="#" title="details" class="">View Details</a>
 					<a href="#" title="add to cart" class="attToCart">Add to cart</a>
 				</div>
 			</div>
@@ -50,6 +67,7 @@
 				<div class="itemInfo">
 					<h1>Apple Airpods/ 2nd Generation/<br>ChargingCase.</h1>
 					<p>Rs.<span>14900/-</span></p>
+					<a href="#" title="details" class="">View Details</a>
 					<a href="#" title="add to cart" class="attToCart">Add to cart</a>
 				</div>
 			</div>
@@ -57,8 +75,9 @@
             <div class="item">
 				<img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/homepod-mini-select-spacegray-202010_FV1?wid=1868&hei=882&fmt=jpeg&qlt=95&.v=1601427724000" alt="HomePod"/>
 				<div class="itemInfo">
-					<h1>Apple Homepod Mini /SpaceGrey/Bluetooth 5.0/ 2021 mfd.</h1>
+					<h1>Apple Homepod Mini /SpaceGrey</h1>
 					<p>Rs.<span>9900/-</span></p>
+					<a href="#" title="details" class="">View Details</a>
 					<a href="#" title="add to cart" class="attToCart">Add to cart</a>
 				</div>
 			</div>
@@ -68,6 +87,7 @@
 				<div class="itemInfo">
 					<h1>iPad / 8th Gen/ Silver/<br> 128GB-Wifi.</h1>
 					<p>Rs.<span>37900/-</span></p>
+					<a href="#" title="details" class="">View Details</a>
 					<a href="#" title="add to cart" class="attToCart">Add to cart</a>
 				</div>
 			</div>
@@ -79,11 +99,13 @@
 			<i class="fa fa-close"></i>
 			<h1>Cart</h1>
 			<table></table>
+            <a href = "#" target="_blank"> Place Order </a>
 		</div>
+        
 	</div>
 
 
 	<!-- script -->
-	<!-- <script src="index.js"></script> -->
+	<script src="index.js"></script>
 </body>
 </html>

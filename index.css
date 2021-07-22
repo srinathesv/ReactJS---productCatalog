@@ -3,6 +3,7 @@
 	padding: 0;
 	box-sizing: border-box;
 	font-family: sans-serif;
+
 }
 .main{
 	position: relative;
@@ -16,7 +17,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
-	background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url('https://images.pexels.com/photos/1486222/pexels-photo-1486222.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+	background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url('https://images.pexels.com/photos/6214377/pexels-photo-6214377.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500');
 	background-size: cover;
 	background-position: center center;
 	font-size: 1.5rem;
@@ -41,8 +42,8 @@
 /*items*/
 .main .itemsBox{
 	position: relative;
-	height: calc(100% - 15vh);
-	width: 90%;
+	height: calc(100% - 20vh);
+	width: 80%;
 	margin:0 auto;
 	overflow: hidden;
 	display: grid;
@@ -54,7 +55,7 @@
 .main .itemsBox .item{
 	position: relative;
 	height: 400px;
-	width: 100%;
+	width: 90%;
 	overflow: hidden;
 	padding: 10px 25px;
 	box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
@@ -76,18 +77,20 @@
 .main .itemsBox .item p{
 	position: relative;
 	width: 100%;
-	text-align: right;
+	text-align: center;
 	font-size: 1.2rem;
 	font-weight: lighter;
-	padding: 10px 0;
+	padding: 10px 0px;
+	padding-bottom: 30px;
 	color: #017bf5;
 }
 .main .itemsBox .item a{
+	
 	position: relative;
-	text-align: left;
+	text-align: center;
 	font-size: 1.2rem;
 	font-weight: lighter;
-	padding: 10px 0;
+	padding: 10px 20px;
 	background: #0f0f0f;
 	text-decoration: none;
 	color: #fff;
@@ -142,4 +145,15 @@
 	margin-top: 2%;
 	font-size: 2.8rem;
 	color: #017bf5;
+}
+.cartBox .cart a:link, a:visited{
+    background-color: #f44336;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+.cartBox .cart a:hover, a:active{
+    background-color: red;
 }
