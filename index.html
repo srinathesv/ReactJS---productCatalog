@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"/> -->
+	<title>
+		Product Catalog
+	</title>
+	<link rel="stylesheet" href="index.css"/>
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+	<script>
+		
+		function Delete(e){
+			let items = [];
+			JSON.parse(localStorage.getItem('items')).map(data=>{
+				if(data.id != e.parentElement.parentElement.children[0].textContent){
+					
+					items.push(data);
+
+				}
+			});
+			localStorage.setItem('items',JSON.stringify(items));
+			window.location.reload();
+		};
+	</script>
+</head>
+<body>
+	<div class="main">
+		<header id="header" class="header">
+			<h1>Product Catalog</h1>
+			<div class="iconShopping">
+				<p>0</p>
+				<i class="fa fa-shopping-cart"></i>
+			</div>
+		</header><!-- /header -->
+		<div class="itemsBox">
+			<div class="item">
+				<img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-family-select-2021?wid=940&hei=1112&fmt=jpeg&qlt=80&.v=1617135051000" alt="iPhone12"/>
+				<div class="itemInfo">
+					<h1>iPhone 12/ Purple/<br> 64gb</h1>
+                    <!-- <h1> Mfd: Jan, 2021. </h1> -->
+					<p>Rs.<span>64999/-</span></p>
+					<a href="#" title="add to cart" class="attToCart">Add to cart</a>
+				</div>
+			</div>
+			<div class="item">
+				<img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone11-green-select-2019?wid=940&hei=1112&fmt=png-alpha&.v=1566956144838" alt="iPhone11"/>
+				<div class="itemInfo">
+					<h1>iPhone 11/ Green/<br>128GB</h1>
+					<p>Rs.<span>59900/-</span></p>
+					<a href="#" title="add to cart" class="attToCart">Add to cart</a>
+				</div>
+			</div>
+			<div class="item">
+				<img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MYA42_VW_34FR+watch-40-alum-spacegray-cell-se_VW_34FR_WF_CO?wid=1400&hei=1400&trim=1,0&fmt=p-jpg&qlt=95&.v=1599010465000,1617299141000" alt="WatchSE"/>
+				<div class="itemInfo">
+					<h1>Apple Watch SE /44mm/SpaceGrey/GPS+Cellular.</h1>
+					<p>Rs.<span>36900/-</span></p>
+					<a href="#" title="add to cart" class="attToCart">Add to cart</a>
+				</div>
+			</div>
+            <div class="item">
+				<img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/airpods-charge-case-201910?wid=300&hei=390&fmt=png-alpha&.v=1570816694133" alt="Airpods"/>
+				<div class="itemInfo">
+					<h1>Apple Airpods/ 2nd Generation/<br>ChargingCase.</h1>
+					<p>Rs.<span>14900/-</span></p>
+					<a href="#" title="add to cart" class="attToCart">Add to cart</a>
+				</div>
+			</div>
+
+            <div class="item">
+				<img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/homepod-mini-select-spacegray-202010_FV1?wid=1868&hei=882&fmt=jpeg&qlt=95&.v=1601427724000" alt="HomePod"/>
+				<div class="itemInfo">
+					<h1>Apple Homepod Mini /SpaceGrey/Bluetooth 5.0/ 2021 mfd.</h1>
+					<p>Rs.<span>9900/-</span></p>
+					<a href="#" title="add to cart" class="attToCart">Add to cart</a>
+				</div>
+			</div>
+
+            <div class="item">
+				<img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/ipad-2020-gallery-1?wid=2824&hei=2400&fmt=jpeg&qlt=80&.v=1598634353000" alt="iPad"/>
+				<div class="itemInfo">
+					<h1>iPad / 8th Gen/ Silver/<br> 128GB-Wifi.</h1>
+					<p>Rs.<span>37900/-</span></p>
+					<a href="#" title="add to cart" class="attToCart">Add to cart</a>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<div class="cartBox">
+		<div class="cart">
+			<i class="fa fa-close"></i>
+			<h1>Cart</h1>
+			<table></table>
+		</div>
+	</div>
+
+
+	<!-- script -->
+	<!-- <script src="index.js"></script> -->
+</body>
+</html>
