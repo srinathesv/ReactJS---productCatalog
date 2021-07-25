@@ -115,6 +115,7 @@
 	z-index: 99999;
 	transition: 0.3s linear;
 	transform: scale(0);
+	overflow: auto;
 }
 .cartBox.active{
 	transform: scale(1);
@@ -157,3 +158,5 @@
 .cartBox .cart a:hover, a:active{
     background-color: red;
 }
+
+
